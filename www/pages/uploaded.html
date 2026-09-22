@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Upload Success - WebServ</title>
+</head>
+
+<body>
+    <div class="bg-gradient-to-br from-[#3d6abb] to-[#111827] font-[Fredoka] min-h-screen flex flex-col">
+        <!-- Navigation -->
+        <nav
+            class="w-full flex justify-between items-center text-[#111827] bg-gradient-to-r from-[#3d6abb] to-[#111827] px-10 md:px-25 lg:px-40 py-5">
+            <div class="text-4xl font-bold text-white">
+                <button onclick="window.location.href='home.html'">WebServ</button>
+            </div>
+            <ul class="gap-10 text-xl hidden lg:flex font-semibold">
+                <a href="home.html" class="hover:text-white transition-color duration-500">
+                    <li>Home</li>
+                </a>
+                <a href="about.html" class="hover:text-white transition-color duration-500">
+                    <li>About</li>
+                </a>
+                <a href="testWebserv.html" class="hover:text-white transition-color duration-500">
+                    <li>TestFiles</li>
+                </a>
+            </ul>
+            <div class="flex gap-5 items-center">
+                <div class="text-xl md:flex gap-3 font-semibold group hidden bg-white px-2 py-1 rounded-2xl">
+                    <a href="login.html">
+                        Go Test
+                    </a>
+                    <div class="w-8 h-8 group-hover:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8 fill-current">
+                            <path
+                                d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="w-8 h-8 group-hover:block hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8 fill-current">
+                            <path
+                                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"
+                        class="w-12 h-12 cursor-pointer">
+                        <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
+                    </svg>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Success Message -->
+        <div class="flex-1 flex items-center justify-center px-6 py-16">
+            <div class="max-w-2xl w-full">
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                    <div class="bg-gradient-to-r from-green-600 to-green-800 px-10 py-8">
+                        <h1 class="text-4xl font-bold text-white flex items-center justify-center gap-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Upload Successful!
+                        </h1>
+                    </div>
+
+                    <div class="p-10 text-center">
+                        <div class="mb-8">
+                            <div
+                                class="inline-flex items-center justify-center w-24 h-24 bg-green-100 rounded-full mb-6">
+                                <svg class="w-16 h-16 text-green-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                        d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+                                </svg>
+                            </div>
+                            <h2 class="text-3xl font-bold text-gray-900 mb-4">File Uploaded Successfully</h2>
+                            <p class="text-lg text-gray-600 mb-2">Your file has been uploaded and saved.</p>
+                            <p class="text-sm text-gray-500">The file is now available in the uploads directory.</p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <button onclick="goBack()"
+                                class="w-full bg-gradient-to-r from-[#3d6abb] to-[#111827] hover:from-[#2d5aab] hover:to-[#001817] text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 shadow-lg">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                                </svg>
+                                Go Back
+                            </button>
+
+                            <button onclick="window.location.href='testWebserv.html'"
+                                class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                        d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                </svg>
+                                Upload Another File
+                            </button>
+
+                            <button onclick="window.location.href='home.html'"
+                                class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+                                Go to Home
+                            </button>
+                        </div>
+
+                        <div class="mt-8 p-4 bg-green-50 rounded-xl border border-green-200">
+                            <p class="text-sm text-green-800">
+                                <span class="font-semibold">✓ Success:</span> Your file has been securely stored on the
+                                server.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-gradient-to-r from-[#3d6abb] to-[#111827] text-white py-6 mt-auto">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <p class="text-sm">
+                    © 2026 WebServ - 42 Network Project
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function goBack() {
+            // Use browser history to go back to previous page
+            if (document.referrer) {
+                window.history.back();
+            } else {
+                // Fallback to home if no referrer
+                window.location.href = 'home.html';
+            }
+        }
+    </script>
+</body>
+
+</html>

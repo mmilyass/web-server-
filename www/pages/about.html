@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="bg-gradient-to-br from-[#3d6abb] to-[#111827] font-[Fredoka] flex flex-col gap-40">
+        <nav
+            class="w-full flex justify-between items-center text-[#111827] bg-gradient-to-r from-[#3d6abb] to-[#111827]  px-10 md:px-25 lg:px-40 py-5">
+            <div class="text-4xl font-bold">
+                <button>WebServ</button>
+            </div>
+            <ul class="gap-10 text-xl hidden lg:flex font-semibold">
+                <a href="home.html" class="hover:text-white transition-color duration-500">
+                    <li>Home</li>
+                </a>
+                <a href="" class="text-white transition-color duration-500">
+                    <li>About</li>
+                </a>
+                <a href="testWebserv.html" class="hover:text-white transition-color duration-500">
+                    <li>TestFiles</li>
+                </a>
+            </ul>
+            <div class="flex gap-5 items-center">
+                <div class="text-xl md:flex gap-3 font-semibold group hidden 
+                    bg-white
+                    px-2 py-1 rounded-2xl">
+                    <a href="">
+                        Go Test
+                    </a>
+                    <div class="w-8 h-8 group-hover:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8 fill-current">
+                            <path
+                                d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="w-8 h-8 group-hover:block hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8 fill-current">
+                            <path
+                                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="lg:hidden" onclick="createNav()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"
+                        class="w-12 h-12 cursor-pointer">
+                        <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
+                    </svg>
+                </div>
+            </div>
+        </nav>
+
+        <div class="max-w-7xl mx-auto px-6 pb-16  px-10 md:px-25 lg:px-40 py-5">
+            <div class="text-center space-y-6 flex flex-col gap-5">
+                <h1 class="text-6xl text-[black] text-center font-[Fredoka] font-semibold">About WebServ <br><span
+                        class="bg-gradient-to-r from-[white] to-[white] text-transparent bg-clip-text font-bold text-8xl md:text-9xl">
+                        KHEDAM
+                    </span>
+                </h1>
+                <div class="inline-block">
+                    <span
+                        class="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold backdrop-blur-sm border border-white/30">
+                        42 Network Project
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center items-center w-full">
+            <div class="w-10 h-15 border border-white rounded-3xl animate-bounce relative ">
+                <div class="rotate-90 text-white absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    -></div>
+            </div>
+        </div>
+
+        <div class="mx-auto px-6 pb-20 px-10 md:px-25 lg:px-40 py-5">
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">HTTP/1.1 Compliant</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Full implementation of HTTP/1.1 protocol with support for GET, POST, and DELETE methods.
+                        Handles persistent connections, chunked transfer encoding, and proper status code management.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 bg-indigo-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">High Performance</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Non-blocking I/O architecture using epoll() for concurrent connection handling.
+                        Efficient request parsing, optimized memory management, and zero external dependencies.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 bg-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Enterprise Features</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Virtual hosting, CGI script execution, file upload handling, custom error pages,
+                        and configuration file parsing. Built for real-world deployment scenarios.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden mb-12 ">
+                <div class="bg-gradient-to-r from-[#3d6abb] to-[#111827] px-10 py-8">
+                    <h2 class="text-3xl font-bold text-white">Technical Architecture</h2>
+                </div>
+                <div class="p-10">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                                <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+                                Core Technologies
+                            </h3>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-blue-600 mt-1">▹</span>
+                                    <span>C++98 standard compliance for maximum portability</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-blue-600 mt-1">▹</span>
+                                    <span>POSIX socket programming with TCP/IP protocol suite</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-blue-600 mt-1">▹</span>
+                                    <span>Multiplexed I/O with select() system call</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-blue-600 mt-1">▹</span>
+                                    <span>Custom HTTP parser with RFC 2616 compliance</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                                <span class="w-2 h-2 bg-indigo-600 rounded-full"></span>
+                                Advanced Features
+                            </h3>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-indigo-600 mt-1">▹</span>
+                                    <span>Multi-server configuration with virtual hosts</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-indigo-600 mt-1">▹</span>
+                                    <span>CGI execution for dynamic content generation</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-indigo-600 mt-1">▹</span>
+                                    <span>Configurable client body size limits and timeouts</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-indigo-600 mt-1">▹</span>
+                                    <span>Comprehensive error handling and logging system</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-[#3d6abb] to-[#111827] rounded-3xl shadow-2xl overflow-hidden">
+                <div class="p-10 md:p-14">
+                    <div class="max-w-4xl mx-auto">
+                        <h2 class="text-4xl font-bold text-white mb-8 text-center">The Webserv KHEDAM Story</h2>
+                        <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
+                            <p>
+                                <span class="text-blue-400 font-semibold">KHEDAM</span> (خدام) — an Arabic word
+                                meaning "is working" —
+                                represents more than just a project completion. It embodies the journey of transforming
+                                theoretical
+                                knowledge into a production-ready system through rigorous engineering and collaborative
+                                problem-solving.
+                            </p>
+                            <p>
+                                This server was built through intensive study of network protocols, system-level
+                                programming, and
+                                software architecture patterns. Every component was carefully designed and implemented
+                                from first
+                                principles, requiring deep understanding of how web servers operate at the lowest
+                                levels.
+                            </p>
+                            <p>
+                                The development process involved navigating complex technical challenges: implementing
+                                non-blocking I/O,
+                                parsing HTTP headers correctly, managing socket states, handling edge cases in CGI
+                                execution, and
+                                ensuring memory safety throughout. Each obstacle was an opportunity to deepen our
+                                understanding of
+                                systems programming.
+                            </p>
+                            <p class="text-blue-400 font-semibold text-xl pt-4">
+                                The result is a testament to perseverance, technical excellence, and the satisfaction of
+                                building
+                                something complex and functional from the ground up.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full flex justify-center items-center -mt-30 mb-10">
+            <div class="text-3xl md:flex gap-3 font-semibold group hidden  bg-white px-2 py-1 rounded-2xl ">
+                <a href="" class="">
+                    Go Test
+                </a>
+                <div class="w-8 h-8 group-hover:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8 fill-current">
+                        <path
+                            d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="w-8 h-8 group-hover:block hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8 fill-current">
+                        <path
+                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+# Build artifacts
+# Build artifacts
+.build/
+build/
+obj/*
+obj/
+*.o
+.vscode
+# Executables
+webserv
+a.out
+
+# Logs / temp files
+*.log
+*.tmp
+*.pid
+
+# Editor files
+.vscode
+*.swp
+*.swo
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Uploads (runtime data, not source)
+uploads/*
+!uploads/.gitkeep
+
+# Generated error pages (if created at runtime)
+errors/*.html
+!errors/.gitkeep
+POST.htm
+www/uploads
+!errors/.gitkeep

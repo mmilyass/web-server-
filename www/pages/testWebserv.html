@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>File Manager - WebServ</title>
+</head>
+
+<body>
+    <div class="bg-gradient-to-br from-[#3d6abb] to-[#111827] font-[Fredoka] flex flex-col min-h-screen">
+        <!-- Navigation -->
+        <nav
+            class="w-full flex justify-between items-center text-[#111827] bg-gradient-to-r from-[#3d6abb] to-[#111827] px-10 md:px-25 lg:px-40 py-5">
+            <div class="text-4xl font-bold text-white">
+                <button>WebServ</button>
+            </div>
+            <ul class="gap-10 text-xl hidden lg:flex font-semibold">
+                <a href="home.html" class="hover:text-white transition-color duration-500">
+                    <li>Home</li>
+                </a>
+                <a href="about.html" class="hover:text-white transition-color duration-500">
+                    <li>About</li>
+                </a>
+                <a href="about.html" class="text-white transition-color duration-500">
+                    <li>TestFiles</li>
+                </a>
+            </ul>
+            <div class="flex gap-5 items-center">
+                <div class="text-xl md:flex gap-3 font-semibold group hidden bg-white px-2 py-1 rounded-2xl">
+                    <a href="">Go Test</a>
+                    <div class="w-8 h-8 group-hover:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8 fill-current">
+                            <path
+                                d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="w-8 h-8 group-hover:block hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8 fill-current">
+                            <path
+                                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"
+                        class="w-12 h-12 cursor-pointer">
+                        <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
+                    </svg>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header Section -->
+        <div class="max-w-7xl mx-auto w-full px-6 py-16 px-10 md:px-25 lg:px-40">
+            <div class="text-center space-y-6 flex flex-col gap-5">
+                <h1 class="text-6xl text-white text-center font-[Fredoka] font-semibold">File Manager</h1>
+                <div class="inline-block mx-auto">
+                    <span
+                        class="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold backdrop-blur-sm border border-white/30">
+                        Upload & Delete Files
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="mx-auto w-full max-w-7xl px-6 pb-20 px-10 md:px-25 lg:px-40 py-5">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Upload Section -->
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-800 px-10 py-8">
+                        <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                            </svg>
+                            Upload Files
+                        </h2>
+                    </div>
+                    <div class="p-10">
+                        <form action="/uploads" method="POST" enctype="multipart/form-data" class="space-y-6">
+                            <div class="border-2 border-dashed border-blue-300 rounded-2xl p-8 text-center">
+                                <svg class="w-16 h-16 mx-auto text-blue-500 mb-4" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+                                        d="M12 4v16m8-8H4" />
+                                </svg>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Select files to upload</h3>
+                                <input type="file" name="file"
+                                    class="w-full px-4 py-2 border border-blue-300 rounded-lg" multiple />
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                        d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2 1m0 0l-2-1m2 1V4.5M12 21L2.458 14.5C2.158 14.325 2 14.03 2 13.714V5.286c0-.315.158-.61.458-.785L12 1l9.542 4.286c.3.175.458.47.458.785v8.428c0 .315-.158.61-.458.785L12 21z" />
+                                </svg>
+                                Upload Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Delete Section -->
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden ">
+                    <div class="bg-gradient-to-r from-red-600 to-red-800 px-10 py-8">
+                        <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                            Delete Files
+                        </h2>
+                    </div>
+                    <div class="p-10">
+                        <form onsubmit="deleteItem(event)" class="space-y-6">
+                            <div class="border-2 border-dashed border-red-300 rounded-2xl p-8 text-center">
+                                <svg class="w-16 h-16 mx-auto text-red-500 mb-4" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                </svg>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Enter filename to delete</h3>
+                                <input id="inpput" type="text" name="filename" placeholder="e.g., test.txt"
+                                    class="w-full px-4 py-2 border border-red-300 rounded-lg" required />
+                            </div>
+
+                            <div class="bg-yellow-50 rounded-xl p-4 border border-yellow-200">
+                                <p class="text-sm text-yellow-800">
+                                    <span class="font-semibold">⚠️ Warning:</span> Deleted files cannot be recovered.
+                                    Please be careful.
+                                </p>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                </svg>
+                                Delete File
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function deleteItem(event) {
+            event.preventDefault();
+            const filename = event.target.filename.value;
+
+            // Send DELETE to the absolute path under www/
+            const target = `/www/${filename}`;
+
+            fetch(target, {
+                method: 'DELETE',
+                body: JSON.stringify({ filename })
+            });
+        }
+    </script>
+
+</body>
+
+</html>

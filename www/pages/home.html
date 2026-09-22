@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>WEBSERVER</title>
+    <meta name="description" content="this Is Our Book Store" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- <style> 
+            body { background-color: rgb(187, 175, 175); }
+            button { 
+                padding: 10px 20px; 
+                font-size: 16px; 
+                cursor: pointer; 
+                margin-top: 20px;
+            }
+        </style> -->
+    <!-- <link rel="stylesheet" href="./assets/css/main.css"> -->
+</head>
+
+<body
+    class="p-0 m-0 font-[Fredoka] bg-gradient-to-b from-[#3d6abb] to-[#111827] gap-10 flex flex-col">
+    <header class="flex flex-col gap-50 h-screen">
+        <div class="w-full">
+            <nav
+                class="w-full flex justify-between items-center text-[#111827] bg-gradient-to-r from-[#3d6abb] to-[#111827]  px-10 md:px-25 lg:px-40 py-5">
+                <div class="text-4xl font-bold">
+                    <button>WebServ</button>
+                </div>
+                <ul class="gap-10 text-xl hidden lg:flex font-semibold">
+                    <a href="" class="hover:text-white transition-color duration-500">
+                        <li>Home</li>
+                    </a>
+                    <a href="about.html" class="hover:text-white transition-color duration-500">
+                        <li>About</li>
+                    </a>
+                    <a href="testWebserv.html" class="hover:text-white transition-color duration-500">
+                        <li>TestFiles</li>
+                    </a>
+                </ul>
+                <div class="flex gap-5 items-center">
+                    <div class="text-xl md:flex gap-3 font-semibold group hidden 
+                    bg-white
+                    px-2 py-1 rounded-2xl">
+                        <a href="login.html">
+                            Go Test
+                        </a>
+                        <div class="w-8 h-8 group-hover:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8 fill-current">
+                                <path
+                                    d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="w-8 h-8 group-hover:block hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8 fill-current">
+                                <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="lg:hidden" onclick="createNav()">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"
+                            class="w-12 h-12 cursor-pointer">
+                            <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="w-full">
+            <div class="flex justify-center flex-col items-center gap-10">
+                <div class="flex justify-center flex-col items-center gap-7">
+                    <h1 class="text-8xl text-[black] text-center font-[Fredoka] font-semibold">WebServ <span
+                            class="bg-gradient-to-r from-[white] to-[white] text-transparent bg-clip-text font-bold">
+                            KHEDAM
+                        </span>
+                    </h1>
+                    <p class="text-center text-3xl text-[#111827] w-full lg:w-[60%]">it is a Http server created with
+                        anger and conflicts and each
+                        team-mate
+                        tell the other is YOUR PROBLEM but althogh. DONE!
+                    </p>
+                </div>
+                <div class="flex gap-5 justify-center items-center">
+                    <div class="text-xl p-2
+                    bg-white
+                    hover:bg-[#111827]
+                    hover:text-white
+                    transition-all duration-500
+                    rounded-2xl">
+                        <a href="#team">
+                            Meat the Team
+                        </a>
+                    </div>
+                    <div class="text-xl flex gap-3  group items-center
+                    p-[6px] rounded-2xl bg-[rgba(255,255,255,0.3)]">
+                        <a href="">
+                            Go Test
+                        </a>
+                        <div class="w-8 h-8 group-hover:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-7 h-7 fill-current">
+                                <path
+                                    d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="w-8 h-8 group-hover:block hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8 fill-white">
+                                <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <main>
+        <section id="team">
+            <divc class="flex flex-col w-full gap-10 min-h-screen pt-5 px-10 md:px-25 lg:px-40">
+                <div class="flex justify-start text-6xl">
+                    <h2 class="text-white font-semibold">Team</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+                    <div class="h-120 w-full bg-[rgba(255,255,255,0.1)] rounded overflow-hidden bg-center bg-no-repeat bg-cover hover:border-white border border-transparent transition-all duration-500 relative flex justify-center"
+                        style="background-image: url('../assets/images/ilyass.png');">
+                        <div
+                            class="absolute h-20 shadow-[1px_3px_7px_rgba(0,0,0,0.5)_] w-[95%] flex justify-center items-start flex-col bottom-5 hover:bottom-7 transition-all duration-500 cursor-pointer">
+                            <div class="uppercase pl-10 text-2xl font-semibold">Ilyass <span
+                                    class="inline md:hidden">Meftah</span> El Menani</div>
+                            <div class="pl-10 text-xl">networking core</div>
+                        </div>
+                    </div>
+                    <div class="h-120 w-full bg-[rgba(255,255,255,0.1)] rounded overflow-hidden bg-center bg-no-repeat bg-cover hover:border-white border border-transparent transition-all duration-500 relative flex justify-center"
+                        style="background-image: url('../assets/images/bounite.png');">
+                        <div
+                            class="absolute h-20  shadow-[1px_3px_7px_rgba(0,0,0,0.5)_] w-[95%] flex justify-center items-start flex-col bottom-5 hover:bottom-7 transition-all duration-500 cursor-pointer">
+                            <div class="uppercase pl-10 text-2xl font-semibold">Youssef Bounite</div>
+                            <div class="pl-10 text-xl">request handling</div>
+                        </div>
+                    </div>
+                    <div class="h-120 w-full bg-[rgba(255,255,255,0.1)] rounded overflow-hidden bg-center bg-no-repeat bg-cover hover:border-white border border-transparent transition-all duration-500 relative flex justify-center"
+                        style="background-image: url('../assets/images/sof.png');">
+                        <div
+                            class="absolute h-20  shadow-[1px_3px_7px_rgba(0,0,0,0.5)_] w-[95%] flex justify-center items-start flex-col bottom-5 hover:bottom-7 transition-all duration-500 cursor-pointer">
+                            <div class="uppercase pl-10 text-2xl font-semibold">Sofiane Dahani</div>
+                            <div class="pl-10 text-xl">parsing</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </section>
+        <section id="skills" class="flex flex-col gap-10 px-10 md:px-25 lg:px-40">
+            <div class="w-full">
+                <h2 class="w-full text-center text-white text-6xl font-semibold">Tech Used</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <a class="w-full bg-gray-200 text-4xl text-center rounded rounded-xl p-4"
+                    href="https://cplusplus.com/doc/tutorial/">C Programming</a>
+                <a class="w-full bg-gray-200 text-4xl text-center rounded rounded-xl p-4" href="">C++ Programming</a>
+                <a class="w-full bg-gray-200 text-4xl text-center rounded rounded-xl p-4"
+                    href="https://developer.mozilla.org/en-US/docs/Web/HTTP"">HTTP Protocol</a>
+                <a class=" w-full bg-gray-200 text-4xl text-center rounded rounded-xl p-4"
+                    href=" https://beej.us/guide/bgnet/">Socket Programming</a>
+                <a class="w-full bg-gray-200 text-4xl text-center rounded rounded-xl p-4"
+                    href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</a>
+            </div>
+        </section>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>

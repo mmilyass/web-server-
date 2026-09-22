@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Register</title>
+</head>
+<body class="p-0 m-0 font-[Fredoka] bg-gradient-to-b from-[#3d6abb] to-[#111827] w-screen">
+    <!-- Register Form -->
+    <div class="flex items-center justify-center min-h-[calc(100vh)] p-4">
+        <div class="bg-white shadow-2xl max-w-md w-full rounded-xl p-8 border border-gray-100">
+            <form class="w-full" method="POST">
+                <div class="mb-8">
+                    <h1 class="text-4xl font-bold text-blue-600 mb-2">Create Account</h1>
+                    <p class="text-gray-500 text-sm">Join us today! Please fill in your details.</p>
+                </div>
+
+                <!-- Username -->
+                <div class="mb-6">
+                    <label class="text-gray-700 text-sm font-medium mb-2 block">Username</label>
+                    <div class="relative flex items-center">
+                        <input name="username" type="text" required class="w-full text-sm border-b-2 border-gray-300 focus:border-blue-600 pr-8 px-2 py-3 outline-none transition-colors" placeholder="Choose a username" />
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" class="w-[18px] h-[18px] absolute right-2" viewBox="0 0 32 32">
+                            <path d="M16 15.503A5.041 5.041 0 1 0 16 5.42a5.041 5.041 0 0 0 0 10.083zm0 2.215c-6.703 0-11 3.699-11 5.5v3.363h22v-3.363c0-2.178-4.068-5.5-11-5.5z" data-original="#000000"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div class="mb-6">
+                    <label class="text-gray-700 text-sm font-medium mb-2 block">Password</label>
+                    <div class="relative flex items-center">
+                        <input name="password" type="password" required class="w-full text-sm border-b-2 border-gray-300 focus:border-blue-600 pr-8 px-2 py-3 outline-none transition-colors" placeholder="Enter password" />
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" class="w-[18px] h-[18px] absolute right-2" viewBox="0 0 128 128">
+                            <path d="M64 104C22.127 104 1.367 67.496.504 65.943a4 4 0 0 1 0-3.887C1.367 60.504 22.127 24 64 24s62.633 36.504 63.496 38.057a4 4 0 0 1 0 3.887C126.633 67.496 105.873 104 64 104zM8.707 64C13.465 71.205 32.146 96 64 96c31.955 0 50.553-24.775 55.293-32C114.535 56.795 95.854 32 64 32 32.045 32 13.447 56.775 8.707 64zM64 88c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm0-40c-8.822 0-16 7.178-16 16s7.178 16 16 16 16-7.178 16-16-7.178-16-16-16z"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="mt-8">
+                    <button type="submit" class="w-full shadow-xl py-3 px-4 text-base font-semibold tracking-wide rounded-lg cursor-pointer text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-200 hover:scale-[1.02]">
+                        Create Account
+                    </button>
+                    <p class="text-gray-600 text-sm text-center mt-6">
+                        Already have an account?
+                        <a href="login.html" class="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">
+                            Sign in here
+                        </a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
